@@ -1,5 +1,3 @@
-
-
 function sortUros(arrayToSort){
     var sortedByNumbersFirst = arrayToSort.sort(function (a,b) {
         if(!isNaN(parseInt(a.title))){
@@ -19,7 +17,7 @@ function sortUros(arrayToSort){
     })
     var nowSortStrings = sortedByLowerNumbers.sort(function (a,b) {
         if(isNaN(parseInt(a.title)) && isNaN(parseInt(b.title))){
-            if( a < b){
+            if( a.title < b.title){
                 return -1
             }else{
                 return 1
@@ -30,7 +28,7 @@ function sortUros(arrayToSort){
 }
 
 
-var sorted = sortUros([{title:'bbbb'},{title:'aaaa'},{title:'1kkk'},{title:'12ttt'},{title:'gaxx'},{title:'11bcc'}]);
+var sorted = sortUros([{title:'bbbb'},{title:'aaaa'},{title:'1kkk'},{title:'12ttt'},{title:'ccccc'},{title:'11bcc'}]);
 
 console.log(sorted);
 
